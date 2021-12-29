@@ -1,0 +1,96 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AnimauxController!{% endblock %}
+
+{% block body %}
+
+    
+    
+    <!--About-->
+    <section class="sections about">
+     <div class="container">
+         <div class="section-header text-center">
+        <h2 class="section-title"><i class="fa fa-paw"></i>  Le monde des animaux  <i class="fa fa-paw"></i></h2>
+        <div class="line"><span></span></div>
+             <p>  Partons à la découverte du monde de nos chers compagnons.</i></p>
+        </div>
+         
+          <div class="row">
+          <div class="col-md-6">
+            <div class="about-info">
+            <h3>Bienvenue sur notre <span>Forum</span>, dédié aux animaux de compagnie.</h3>
+                <p class="about-info-desc"> Vous aimez les animaux ? Cet espace vous est dédié. Venez discuter avec des centaines de passionnés,
+				alimenter des discussions, poser des questions à notre équipe ainsi qu’aux autres membres, partager vos expériences, conseils,
+				tests produits ou encore les plus belles photos de vos boules de poils. Vous pouvez également déposer ou répondre à des petites
+				annonces si vous souhaitez donner ou recueillir un animal. 
+				Ce forum est l’endroit idéal pour parler de nos compagnons à poils, plumes ou écailles. Rejoignez la communauté</p>
+                <button class="about-info-btn">Information</button>
+            </div>
+          </div>
+            <div class="col-md-6">
+                <div class="about-img">
+                    <img src="{{asset('ressource/images/about/home.jpg')}}" alt=""/>
+                </div>
+            </div>
+     </div>  
+    </section>
+        <section class="sections services">
+            
+            <div class="container">
+         <div class="section-header text-center">
+        <h2 class="section-title"><i class="fa fa-paw"></i>  Présentation  <i class="fa fa-paw"></i></h2>
+             <div class="line"><span></span></div>
+             <p>Découvrez nos différents Forums.</p>
+        </div><!-- ./section-header-->
+                <div class="row">
+                <div class="col-md-4 col-xs-12">
+                    <div class="serv">
+                    <img class="icon" src="{{asset('ressource/images/about/chien.jpg')}}">
+                    <h3 class="serv-title">Chiens</h3>
+                        <p class="serv-desc">Échangez avec des milliers d'autres passionné(e)s de chiens : demander de l'aide,
+						confronter des avis, partager des conseils et astuces, faire part de bonnes nouvelles...</p>
+                    </div></div>
+                 <div class="col-md-4 col-xs-12">
+                    <div class="serv">
+                  <img class="icon" src="{{asset('ressource/images/about/cheval.jpg')}}">
+                    <h3 class="serv-title">Chevaux</h3>
+                        <p class="serv-desc">Échangez avec des milliers d'autres passionné(e)s de chevaux : demander de l'aide, 
+						confronter des avis, partager des conseils et astuces, faire part de bonnes nouvelles...</p>
+                    </div></div>
+                 <div class="col-md-4 col-xs-12">
+                    <div class="serv">
+                  
+					<img class="icon" src="{{asset('ressource/images/about/chat.jpg')}}">
+                    <h3 class="serv-title">Chats</h3>
+                        <p class="serv-desc">Échangez avec des milliers d'autres passionné(e)s de chats : demander de l'aide,
+						confronter des avis, partager des conseils et astuces, faire part de bonnes nouvelles...</p>
+                    </div></div></div>
+            <div class="row">
+                 <div class="col-md-4 col-xs-12">
+                    <div class="serv">
+                  <img class="icon" src="{{asset('ressource/images/about/poisson.jpg')}}">
+                    <h3 class="serv-title">Poissons</h3>
+                        <p class="serv-desc">Échangez avec des milliers d'autres passionné(e)s de poissons : demander de l'aide, 
+						confronter des avis, partager des conseils et astuces, faire part de bonnes nouvelles...</p>
+                    </div>
+                 </div>
+                 <div class="col-md-4 col-xs-12">
+                    <div class="serv">
+                  <img class="icon" src="{{asset('ressource/images/about/reptile.jpg')}}">
+                    <h3 class="serv-title">Reptile</h3>
+                        <p class="serv-desc">Échangez avec des milliers d'autres passionné(e)s de reptiles
+						: demander de l'aide, confronter des avis, partager des conseils et astuces, faire part de bonnes nouvelles...</p>
+                    </div>
+                 </div>
+                 <div class="col-md-4 col-xs-12">
+                    <div class="serv">
+                    <img class="icon" src="{{asset('ressource/images/about/oiseau.jpg')}}">
+                    <h3 class="serv-title">Oiseau</h3>
+                        <p class="serv-desc">Échangez avec des milliers d'autres passionné(e)s des oiseaux
+						: demander de l'aide, confronter des avis, partager des conseils et astuces, faire part de bonnes nouvelles...</p>
+                    </div>
+                 </div>
+            </div>
+        
+       
+{% endblock %}

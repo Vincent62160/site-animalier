@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+  
+
+     {{ form_start(registrationForm) }}
+
+     
+          <div class="container mt-5" >
+           <div class="row shadow p-4 mb-5 2px ">
+             <div class="col-md-12"  style="background-color:rgba(10 10 20 0);;color:black;">
+                 <h1 class="text-center mb-4 mt-2" style="color:black;">Inscription</h1>
+        {{ form_row(registrationForm.username, {
+             label: 'Pseudo'
+
+        }) }}
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Mot de passe'
+        }) }}
+    
+
+         <button  name="logout" class="btn btn-success btn-lg btn-block mb-3 mt-3">S'INSCRIRE</button>
+                <div>
+                    <a href="{{ path('app_login') }}" class="btn btn-success btn-lg btn-block mb-3 mt-3">SE CONNECTER</a>
+                </div>
+        {{ form_row(registrationForm.agreeTerms) }}
+
+        <button type="submit" class="btn">Register</button>
+    {{ form_end(registrationForm) }}
+    </div>
+    </div>
+    </div>
+{% endblock %}

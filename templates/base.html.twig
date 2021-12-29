@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="{{asset('ressource/CSS/vendors/font-awesome.css')}}">
+    <link rel="stylesheet" href="{{asset('ressource/CSS/style.css')}}">
+    <title>MON SITE À MOI</title>
+       
+</head>
+<body>
+    <!--header-->
+    <header>
+    <div class="container">
+     <div class="row">
+         <!--menu burger-->
+        <i class="icon fa fa-bars fa-2x"></i>
+            <!--Logo-->
+       <div class="col-md-3 col-xs-12">
+            <div class="logo">
+                <h2>Forum</h2>
+            </div>
+        </div>
+            <!--navigation-->
+          <nav class="col-md-9 col-xs-12">
+            <ul class="nav-list">
+                 <li class="list"><a href="#">Annonce</a></li>
+          
+                 <li class="list"><a href="#">Photo</a></li>
+               
+                 <li class="list"><a href="#">Témoignages</a></li>
+               
+                 <li class="list"><a href="#">Contact</a></li>
+                
+            </ul>
+         </nav>
+     </div>
+    </div>
+</header>
+    <!-- /header -->
+    <!-- Home -->
+    <section class="sections homes">
+        <div class="overlay">
+            <div class="container">
+                <div class="home-content">
+                 {% if app.user %}
+        <div class="mb-3">
+             <h3 class="home-title"> <p class="span1" id="txt_acceuil">Bienvenue {{ app.user.username }}</p></h3>
+              <button class="btn button"><a class="btn lien" id="button" href="{{path('app_logout')}}">Se déconnecter</a></button>
+        </div>
+             {% endif %}
+             {% if app.user == false %}
+
+                 
+                
+                  <button class="btn button"><a class="btn lien" id="button" href="{{path('app_register')}}">S'inscrire</a></button>
+               {% endif %}
+                </div>
+             </div>
+   
+        
+        </div>
+    </section>
+    <!-- /Home -->
+        {% block body %}{% endblock %}
+     <script src="{{asset('ressource/JS/vendors/jquery-3.5.1.js')}}"></script>
+    <script src="{{asset('ressource/JS/vendors/bootstrap.js')}}"></script>
+    <script src="{{asset('ressource/JS/main.js')}}"></script>
+
+    </body>
+</html>   
