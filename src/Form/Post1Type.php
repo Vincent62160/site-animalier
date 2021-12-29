@@ -6,15 +6,21 @@ use App\Entity\Post;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 
-class PostType extends AbstractType
+class Post1Type extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('message')
-            ->add('date')
-            ->add('user')
+        ->add('imageFile', FileType::class, [
+            'required' => true,
+            'label' => 'Télécharger une image de type jpg, jpeg,png, gif   ',
+
+        ])
+           
+            ->add('description')
+       
         ;
     }
 

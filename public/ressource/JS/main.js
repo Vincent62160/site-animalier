@@ -223,18 +223,17 @@ function monHeure() {
     sessionStorage.setItem('horloge', heure_con);
 }
 /*enregistrement de l'heure*/
-var inp=localStorage.getItem('coord');
-     obj = JSON.parse(inp);
+
 var recup = sessionStorage.getItem('horloge'),
     obje = JSON.parse(recup);
 	 
 window.addEventListener('load', function () {
-    "use strict";
+    "use strict"
 	document.getElementById('lecture').addEventListener('click', monHeure);
 });       
 window.addEventListener('load', function () {
-    "use strict";
-    document.getElementById('prenom1').innerHTML = obj.pseudo;
+    
+    
     /*afficher le pseudo dans le html*/
     document.getElementById('heure1').innerHTML = obje.heurs + "h" + obje.minut;
 	/*afficher l'heure dans le html*/

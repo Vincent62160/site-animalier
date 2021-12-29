@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ForumChienController!{% endblock %}
+
+{% block body %}
+<div class="container-fluid p-3">
+    <div class="row">
+                 <a class="btn btn-success " href="{{ path('admin_post_new') }}" style="position:fixed">Ajouter un post</a>
+    </div>
+       
+        {% for post in posts %}
+            <div class="row mb-5">
+                 <div class="col-lg-5 col-xs-12 col-sm-12 m-auto shadow p-3 bg-white rounded">
+                <p>Le {{ post.date|date(" d-m-Y à H:i:s") }}</p>
+                
+                <p><img class="w-100" src="{{ vich_uploader_asset(post, 'imageFile') }}" alt=""></p>
+               
+                <p class="text-justify">{{ post.description|raw }}</p>
+                </div>
+                </div>
+            
+                
+                
+                
+               
+                
+            
+        {% else %}
+            <tr>
+                <p colspan="5">no records found</p>
+            </tr>
+        {% endfor %}
+    
+        
+
+    <div class="row">
+                 <a class="btn btn-success " href="{{ path('admin_post_new') }}">Ajouter un post</a>
+                </div>
+   
+</div>
+{% endblock %}

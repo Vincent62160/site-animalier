@@ -7,10 +7,10 @@ use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method Post|null find($id, $lockMode = null, $lockVersion = null)
- * @method Post|null findOneBy(array $criteria, array $orderBy = null)
- * @method Post[]    findAll()
- * @method Post[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Images|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Images|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Images[]    findAll()
+ * @method Images[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
 class PostRepository extends ServiceEntityRepository
 {
@@ -20,15 +20,15 @@ class PostRepository extends ServiceEntityRepository
     }
 
     // /**
-    //  * @return Post[] Returns an array of Post objects
+    //  * @return Images[] Returns an array of Images objects
     //  */
     /*
     public function findByExampleField($value)
     {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
+        return $this->createQueryBuilder('i')
+            ->andWhere('i.exampleField = :val')
             ->setParameter('val', $value)
-            ->orderBy('p.id', 'ASC')
+            ->orderBy('i.id', 'ASC')
             ->setMaxResults(10)
             ->getQuery()
             ->getResult()
@@ -37,10 +37,10 @@ class PostRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?Post
+    public function findOneBySomeField($value): ?Images
     {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
+        return $this->createQueryBuilder('i')
+            ->andWhere('i.exampleField = :val')
             ->setParameter('val', $value)
             ->getQuery()
             ->getOneOrNullResult()

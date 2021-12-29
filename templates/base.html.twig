@@ -47,8 +47,9 @@
                 <div class="home-content">
                  {% if app.user %}
         <div class="mb-3">
-             <h3 class="home-title"> <p class="span1" id="txt_acceuil">Bienvenue {{ app.user.username }}</p></h3>
+             <h3 class="home-title"> <p class="span1" id="txt_acceuil">Bienvenue {{ app.user.username }} tu t'es connecté à<p id="heure1" class="span1"></p></h3>
               <button class="btn button"><a class="btn lien" id="button" href="{{path('app_logout')}}">Se déconnecter</a></button>
+              <button class="btn button"value="{{ app.user.username }}" id="username" style="display:none;"></button>
         </div>
              {% endif %}
              {% if app.user == false %}
